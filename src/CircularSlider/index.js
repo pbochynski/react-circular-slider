@@ -120,7 +120,7 @@ const CircularSlider = ({
 
         if(state.data[currentPoint] !== state.label) {
             // props callback for parent
-            onChange(state.data[currentPoint]);
+//             onChange(state.data[currentPoint]);
         }
 
         dispatch({
@@ -146,6 +146,7 @@ const CircularSlider = ({
     };
 
     const onMouseUp = () => {
+        onChange(state.data[currentPoint]);
         dispatch({
             type: 'onMouseUp',
             payload: {
